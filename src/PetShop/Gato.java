@@ -6,8 +6,8 @@ public class Gato  extends Mascota{
 
 
     // Constructor
-    public Gato(String sexo, int edad, String codigoEAN,  int chip, String nombre, String color, String raza, String tipoPelo ) {
-        super(sexo, edad, codigoEAN, chip, nombre);
+    public Gato(String sexo, int edad, String codigoEAN, String especie,  int chip, String nombre, String color, String raza, String tipoPelo ) {
+        super(sexo, edad, codigoEAN,especie, chip, nombre);
         this.color = color;
         this.raza = raza;
         this.tipoPelo = tipoPelo;

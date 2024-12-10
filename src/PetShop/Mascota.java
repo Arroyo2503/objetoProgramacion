@@ -1,17 +1,23 @@
   abstract class Mascota extends Animal {
-    private int chip; // Número único identificador
+    private int chip ; // Número único identificador
     private String nombre; // Nombre de la mascota
-    private String propietarioNombre;
-    private String propietarioApellido;
-    private String propietarioDNI;
+      private String especie = "";
+    private String propietarioNombre = "";
+    private String propietarioApellido = "";
+    private String propietarioDNI = "";
 
-    public Mascota(String sex, int age, String eanCode, int chip, String nombre) {
+    public Mascota(String sex, int age, String eanCode, String especie, int chip, String nombre) {
         super(sex, age, eanCode);
         this.chip = chip;
         this.nombre = nombre;
+        this.especie= especie;
     }
 
 
+
+      public String getEspecie() {
+          return especie;
+      }
 
     public int getChip() {
         return chip;
@@ -26,6 +32,9 @@
         this.propietarioApellido = apellido;
         this.propietarioDNI = dni;
     }
+      public String getPropietarioDNI() {
+          return propietarioDNI;
+      }
 
     public String getPropietario() {
         if (propietarioDNI != null) {
@@ -37,6 +46,6 @@
 
     @Override
     public String toString() {
-        return "Mascota - Chip: " + chip + ", Nombre: " + nombre + ", " + getPropietario();
+        return "Mascota - Chip: " + chip + ", Nombre: " + nombre + " ,Especie: " + especie +" , " + getPropietario();
     }
 }

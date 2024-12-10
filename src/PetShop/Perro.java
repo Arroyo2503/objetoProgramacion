@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Perro extends Mascota {
 
     private String color = "";
@@ -6,8 +8,8 @@ public class Perro extends Mascota {
     private boolean tienePedrigree = true ;
 
     // Constructor
-    public Perro(String sexo, int edad, String codigoEAN,  int chip, String nombre, String color, String raza, String tipoPelo, boolean tienePedrigree ) {
-        super(sexo,edad, codigoEAN, chip, nombre);
+    public Perro(String sexo, int edad, String codigoEAN, String especie, int chip, String nombre, String color, String raza, String tipoPelo, boolean tienePedrigree ) {
+        super(sexo, edad, codigoEAN,especie, chip, nombre);
         this.color = color;
         this.raza = raza;
         this.tipoPelo = tipoPelo;
